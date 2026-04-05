@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persist users.json on the host so data survives container removal/recreation
+      - ./data:/app/app/data
